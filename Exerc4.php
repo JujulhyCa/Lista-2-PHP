@@ -2,13 +2,15 @@
 que digite um número e ele informe qual o nome do mês correspondente. -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nome do Mês</title>
 </head>
 <body>
-    
-</body>
-</html>
+    <h2>Nome do Mês</h2>
+    <form action="" method="post">
+        Digite o número do mês (1 a 12): <input type="number" name="numero_mes" min="1" max="12" required><br><br>
+        <input type="submit" value="Verificar">
+    </form>
