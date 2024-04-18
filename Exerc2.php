@@ -50,3 +50,12 @@ c. quantos pares e ímpares.-->
                 }
             }
         }
+
+        // Exibindo campos para entrada de números
+        for ($i = 1; $i <= 10; $i++) {
+            echo "Número $i: <input type='number' name='numero_$i' required><br>";
+        }
+        ?>
+        <br>
+        <input type="submit" value="Analisar">
+    </form>
