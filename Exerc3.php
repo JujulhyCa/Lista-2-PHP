@@ -49,9 +49,12 @@ usuário em todos os elementos armazenados.-->
     </form>
 
     <?php
-    // Exibindo o resultado da multiplicação
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && $resultado !== null) {
-        echo "<h3>Resultado da Multiplicação: $resultado</h3>";
+    // Exibindo o resultado da multiplicação em todas as posições do vetor
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($resultados)) {
+        echo "<h3>Resultado da Multiplicação em todas as posições do vetor:</h3>";
+        foreach ($resultados as $indice => $resultado) {
+            echo "Posição $indice: $resultado<br>";
+        }
     }
     ?>
 </body>
