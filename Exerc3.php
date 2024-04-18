@@ -17,7 +17,7 @@ usuário em todos os elementos armazenados.-->
         <?php
             // Definindo o vetor e inicializando variáveis
             $numeros = [];
-            $resultado = null;
+            $resultados = [];
 
             // Processamento dos dados do formulário
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -30,22 +30,19 @@ usuário em todos os elementos armazenados.-->
                 // Recebendo o número para multiplicação
                 $multiplicador = $_POST["multiplicador"];
 
-                // Multiplicando todos os elementos pelo número fornecido
-                $resultado = 1;
+               // Multiplicando cada elemento do vetor pelo número fornecido
                 foreach ($numeros as $numero) {
-                    $resultado *= $numero;
+                    $resultados[] = $numero * $multiplicador;
                 }
-                $resultado *= $multiplicador;
             }
-
             // Exibindo campos para entrada de números
-        for ($i = 1; $i <= 10; $i++) {
-            echo "Número $i: <input type='number' name='numero_$i' required><br>";
-        }
-        ?>
-        <br>
-        Número para multiplicar: <input type="number" name="multiplicador" required><br><br>
-        <input type="submit" value="Calcular">
+            for ($i = 1; $i <= 10; $i++) {
+                echo "Número $i: <input type='number' name='numero_$i' required><br>";
+            }
+            ?>
+            <br>
+            Número para multiplicar: <input type="number" name="multiplicador" required><br><br>
+            <input type="submit" value="Calcular">
     </form>
 
     <?php
