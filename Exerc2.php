@@ -32,3 +32,21 @@ c. quantos pares e ímpares.-->
             $positivos = 0;
             $pares = 0;
             $impares = 0;
+
+            // Analisando os números
+            foreach ($numeros as $numero) {
+                // Verificando se o número é negativo ou positivo
+                if ($numero < 0) {
+                    $negativos++;
+                } elseif ($numero > 0) {
+                    $positivos++;
+                }
+
+                // Verificando se o número é par ou ímpar
+                if ($numero % 2 == 0) {
+                    $pares++;
+                } else {
+                    $impares++;
+                }
+            }
+        }
