@@ -40,7 +40,7 @@ que digite um número e ele informe qual o nome do mês correspondente. -->
         if ($numero_mes >= 1 && $numero_mes <= 12) {
             // Obtém o nome do mês correspondente ao número fornecido
             $nome_mes = $meses[$numero_mes];
-            echo "<p>O mês correspondente $numero_mes é $nome_mes</p>";
+            echo "<p>O mês $numero_mes é $nome_mes</p>";
         } /*else {
             echo "<p>Número do mês inválido. Por favor, digite um número entre 1 e 12.</p>";
         }*/
