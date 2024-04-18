@@ -13,3 +13,27 @@ usuário em todos os elementos armazenados.-->
 <body>
     <h2>Multiplicação de Elementos</h2>
     <form action="" method="post">
+
+        <?php
+            // Definindo o vetor e inicializando variáveis
+            $numeros = [];
+            $resultado = null;
+
+            // Processamento dos dados do formulário
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                // Recebendo e armazenando os números
+                for ($i = 1; $i <= 10; $i++) {
+                    $numero = $_POST["numero_$i"];
+                    $numeros[] = $numero;
+                }
+
+                // Recebendo o número para multiplicação
+                $multiplicador = $_POST["multiplicador"];
+
+                // Multiplicando todos os elementos pelo número fornecido
+                $resultado = 1;
+                foreach ($numeros as $numero) {
+                    $resultado *= $numero;
+                }
+                $resultado *= $multiplicador;
+            }
