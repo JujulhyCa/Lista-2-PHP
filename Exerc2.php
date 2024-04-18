@@ -59,3 +59,16 @@ c. quantos pares e ímpares.-->
         <br>
         <input type="submit" value="Analisar">
     </form>
+
+    <?php
+    // Exibindo resultados
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        echo "<h3>Resultados:</h3>";
+        echo "Quantidade de números negativos: $negativos<br>";
+        echo "Quantidade de números positivos: $positivos<br>";
+        echo "Quantidade de números pares: $pares<br>";
+        echo "Quantidade de números ímpares: $impares<br>";
+    }
+    ?>
+</body>
+</html>
