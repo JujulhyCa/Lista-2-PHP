@@ -3,13 +3,12 @@ resultante que contenha todos os números primos do vetor digitado. Mostre os
 valores do vetor resultante.-->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Números Primos</title>
 </head>
 <body>
-    
-</body>
-</html>
+    <h2>Números Primos</h2>
+    <form action="" method="post">
