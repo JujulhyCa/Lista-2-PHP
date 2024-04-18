@@ -22,3 +22,23 @@ obteve maior nota. -->
         $media_notas = 0;
         $maior_nota = 0;
         $aluno_maior_nota = '';
+
+        // Processamento dos dados do formulário
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            // Loop para receber dados de cada aluno
+            for ($i = 1; $i <= $total_alunos; $i++) {
+                $nome_aluno = $_POST['nome_aluno_' . $i];
+                $nota_aluno = $_POST['nota_aluno_' . $i];
+
+                // Armazenamento dos dados do aluno em um array associativo
+                $alunos[$nome_aluno] = $nota_aluno;
+
+                // Atualização da média das notas
+                $media_notas += $nota_aluno;
+
+                // Verificação da maior nota e armazenamento do nome do aluno
+                if ($nota_aluno > $maior_nota) {
+                    $maior_nota = $nota_aluno;
+                    $aluno_maior_nota = $nome_aluno;
+                }
+            }
