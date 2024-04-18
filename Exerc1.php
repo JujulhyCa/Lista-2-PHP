@@ -63,7 +63,7 @@ obteve maior nota. -->
     // Exibição da média das notas e do aluno com a maior nota
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<h3>Média de Notas da Classe: " . number_format($media_notas, 2) . "</h3>";
-        echo "<h3>Aluno com Maior Nota: $aluno_maior_nota - $maior_nota</h3>";
+        echo "<h3>Aluno com Maior Nota: $aluno_maior_nota - Nota: $maior_nota</h3>";
     }
     ?>
 </body>
