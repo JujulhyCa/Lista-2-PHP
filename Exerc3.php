@@ -37,3 +37,22 @@ usuário em todos os elementos armazenados.-->
                 }
                 $resultado *= $multiplicador;
             }
+
+            // Exibindo campos para entrada de números
+        for ($i = 1; $i <= 10; $i++) {
+            echo "Número $i: <input type='number' name='numero_$i' required><br>";
+        }
+        ?>
+        <br>
+        Número para multiplicar: <input type="number" name="multiplicador" required><br><br>
+        <input type="submit" value="Calcular">
+    </form>
+
+    <?php
+    // Exibindo o resultado da multiplicação
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && $resultado !== null) {
+        echo "<h3>Resultado da Multiplicação: $resultado</h3>";
+    }
+    ?>
+</body>
+</html>
