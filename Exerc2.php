@@ -4,14 +4,13 @@ a. quantos negativos foram digitados;
 b. quantos positivos foram digitados; 
 c. quantos pares e ímpares.-->
 
-<!DOCTYPE html>
-<html lang="en">
+!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Análise de Números</title>
 </head>
 <body>
-    
-</body>
-</html>
+    <h2>Análise de Números</h2>
+    <form action="" method="post">
