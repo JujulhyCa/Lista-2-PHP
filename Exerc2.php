@@ -4,7 +4,7 @@ a. quantos negativos foram digitados;
 b. quantos positivos foram digitados; 
 c. quantos pares e ímpares.-->
 
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
