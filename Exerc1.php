@@ -4,13 +4,21 @@ final do programa mostrar a média de nota da classe, e o nome do aluno que
 obteve maior nota. -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registro de Alunos</title>
 </head>
 <body>
-    
-</body>
-</html>
+    <h2>Registro de Alunos</h2>
+    <form action="" method="post">
+        <?php
+        // Número total de alunos
+        $total_alunos = 10;
+
+        // Inicialização de variáveis
+        $alunos = [];
+        $media_notas = 0;
+        $maior_nota = 0;
+        $aluno_maior_nota = '';
