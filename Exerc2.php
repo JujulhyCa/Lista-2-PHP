@@ -14,3 +14,21 @@ c. quantos pares e ímpares.-->
 <body>
     <h2>Análise de Números</h2>
     <form action="" method="post">
+
+    <?php
+        // Definição de variáveis
+        $numeros = [];
+
+        // Processamento dos dados do formulário
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            // Recebendo e armazenando os números
+            for ($i = 1; $i <= 10; $i++) {
+                $numero = $_POST["numero_$i"];
+                $numeros[] = $numero;
+            }
+
+            // Inicialização de contadores
+            $negativos = 0;
+            $positivos = 0;
+            $pares = 0;
+            $impares = 0;
