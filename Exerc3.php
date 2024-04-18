@@ -4,13 +4,12 @@ programa deverá exibir o resultado da multiplicação do número dado pelo
 usuário em todos os elementos armazenados.-->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Multiplicação de Elementos</title>
 </head>
 <body>
-    
-</body>
-</html>
+    <h2>Multiplicação de Elementos</h2>
+    <form action="" method="post">
