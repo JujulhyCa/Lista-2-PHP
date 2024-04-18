@@ -20,7 +20,7 @@ valores do vetor resultante.-->
             // Processamento dos dados do formulário
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Recebendo e armazenando os números
-                for ($i = 1; $i <= 20; $i++) {
+                for ($i = 1; $i <= 5; $i++) {
                     $numero = $_POST["numero_$i"];
                     $numeros[] = $numero;
                 }
@@ -47,7 +47,7 @@ valores do vetor resultante.-->
             }
 
         // Exibindo campos para entrada de números
-        for ($i = 1; $i <= 20; $i++) {
+        for ($i = 1; $i <= count($numeros); $i++) {
             echo "Número $i: <input type='number' name='numero_$i' required><br>";
         }
         ?>
