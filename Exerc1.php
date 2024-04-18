@@ -42,3 +42,29 @@ obteve maior nota. -->
                     $aluno_maior_nota = $nome_aluno;
                 }
             }
+
+            // Cálculo da média das notas
+            $media_notas /= $total_alunos;
+
+            // Ordena o array de alunos por nome
+            ksort($alunos);
+        }
+
+        // Exibição do formulário para entrada de dados dos alunos
+        for ($i = 1; $i <= $total_alunos; $i++) {
+            echo "Nome do Aluno $i: <input type='text' name='nome_aluno_$i' required><br>";
+            echo "Nota do Aluno $i: <input type='number' step='0.01' name='nota_aluno_$i' required><br><br>";
+        }
+        ?>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <?php
+    // Exibição da média das notas e do aluno com a maior nota
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        echo "<h3>Média de Notas da Classe: " . number_format($media_notas, 2) . "</h3>";
+        echo "<h3>Aluno com Maior Nota: $aluno_maior_nota - $maior_nota</h3>";
+    }
+    ?>
+</body>
+</html>
