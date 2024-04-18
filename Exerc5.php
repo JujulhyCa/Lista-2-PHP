@@ -37,3 +37,30 @@ valores do vetor resultante.-->
                     }
                     return true;
                 }
+
+                // Filtrando os números primos e armazenando no vetor resultante
+                foreach ($numeros as $numero) {
+                    if (ehPrimo($numero)) {
+                        $vetor_resultante[] = $numero;
+                    }
+                }
+            }
+
+        // Exibindo campos para entrada de números
+        for ($i = 1; $i <= 20; $i++) {
+            echo "Número $i: <input type='number' name='numero_$i' required><br>";
+        }
+        ?>
+        <br>
+        <input type="submit" value="Calcular">
+    </form>
+
+    <?php
+    // Exibindo os números primos do vetor resultante
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($vetor_resultante)) {
+        echo "<h3>Números Primos:</h3>";
+        echo implode(', ', $vetor_resultante);
+    }
+    ?>
+</body>
+</html>
