@@ -16,7 +16,7 @@ sem exibir o valor da média. -->
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <?php
         // Exibindo campos para entrada de dados dos alunos
-        for ($i = 1; $i <= 10; $i++) {
+        for ($i = 1; $i <= 5; $i++) {
             echo "Aluno $i:<br>";
             echo "Nome: <input type='text' name='nome_$i' required><br>";
             echo "Nota 1: <input type='number' name='nota1_$i' step='0.01' min='0' max='10' required><br>";
@@ -25,3 +25,55 @@ sem exibir o valor da média. -->
         ?>
         <input type="submit" value="Calcular">
     </form>
+    <?php
+    // Processamento dos dados do formulário
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Inicializando um array associativo para armazenar os dados dos alunos
+        $alunos = [];
+
+        // Recebendo e armazenando os dados dos alunos
+        for ($i = 1; $i <= 10; $i++) {
+            $nome = isset($_POST["nome_$i"]) ? $_POST["nome_$i"] : '';
+            $nota1 = isset($_POST["nota1_$i"]) ? $_POST["nota1_$i"] : '';
+            $nota2 = isset($_POST["nota2_$i"]) ? $_POST["nota2_$i"] : '';
+
+            // Verificando se os campos foram preenchidos antes de processar os dados
+            if ($nome !== '' && $nota1 !== '' && $nota2 !== '') {
+                // Calculando a média das notas
+                $media = ($nota1 + $nota2) / 2;
+
+                // Armazenando os dados do aluno no mapa ordenado
+                $alunos[$nome] = ['nota1' => $nota1, 'nota2' => $nota2, 'media' => $media];
+            }
+        }
+
+        // Separando os alunos aprovados e reprovados
+        $aprovados = [];
+        $reprovados = [];
+        foreach ($alunos as $nome => $dados) {
+            if ($dados['media'] >= 6.0) {
+                $aprovados[$nome] = $dados['media'];
+            } else {
+                $reprovados[] = $nome;
+            }
+        }
+
+        // Exibindo a lista de alunos aprovados
+        if (!empty($aprovados)) {
+            echo "<h3>Alunos Aprovados:</h3>";
+            foreach ($aprovados as $nome => $media) {
+                echo "$nome - Média: $media<br>";
+            }
+        }
+
+        // Exibindo a lista de alunos reprovados
+        if (!empty($reprovados)) {
+            echo "<h3>Alunos Reprovados:</h3>";
+            foreach ($reprovados as $nome) {
+                echo "$nome<br>";
+            }
+        }
+    }
+    ?>
+</body>
+</html>
