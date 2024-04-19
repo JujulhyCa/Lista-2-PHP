@@ -18,7 +18,7 @@ valores do vetor resultante.-->
                 $vetor_resultante = [];
 
                 // Exibindo campos para entrada de números
-                for ($i = 1; $i <= 5; $i++) {
+                for ($i = 1; $i <= 20; $i++) {
                     echo "Número $i: <input type='number' name='numero_$i' required><br>";
                 }
 
