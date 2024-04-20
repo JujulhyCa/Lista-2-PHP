@@ -34,6 +34,7 @@ que digite um número e ele informe qual o nome do mês correspondente. -->
 
     // Processamento dos dados do formulário
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // se a requisição HTTP é do tipo POST
         $numero_mes = $_POST["numero_mes"];
 
         // Verifica se o número do mês está dentro do intervalo válido

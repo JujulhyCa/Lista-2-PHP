@@ -60,6 +60,7 @@ sem exibir o valor da média. -->
 
         // Exibindo a lista de alunos aprovados
         if (!empty($aprovados)) {
+        // se a variável $aprovados não está vazia
             echo "<h3>Alunos Aprovados:</h3>";
             foreach ($aprovados as $nome => $media) {
                 echo "$nome - Média: $media<br>";
@@ -68,6 +69,7 @@ sem exibir o valor da média. -->
 
         // Exibindo a lista de alunos reprovados
         if (!empty($reprovados)) {
+        // se a variável $reprovados não está vazia
             echo "<h3>Alunos Reprovados:</h3>";
             foreach ($reprovados as $nome) {
                 echo "$nome<br>";

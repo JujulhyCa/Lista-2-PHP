@@ -25,6 +25,7 @@ obteve maior nota. -->
 
         // Processamento dos dados do formulário
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // se a requisição HTTP é do tipo POST
             // Loop para receber dados de cada aluno
             for ($i = 1; $i <= $total_alunos; $i++) {
                 $nome_aluno = $_POST['nome_aluno_' . $i];

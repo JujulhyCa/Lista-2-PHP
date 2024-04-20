@@ -48,6 +48,7 @@ usuário em todos os elementos armazenados.-->
     <?php
     // Exibindo o resultado da multiplicação em todas as posições do vetor
     if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($resultados)) {
+    // se a requisição HTTP é do tipo POST e se a variável $resultados não está vazia
         echo "<h3>Resultado da Multiplicação em todas as posições do vetor:</h3>";
         foreach ($resultados as $indice => $resultado) {
             echo "Posição $indice: $resultado<br>";
